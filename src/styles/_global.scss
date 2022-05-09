@@ -1,0 +1,49 @@
+/**
+* @author Volodymyr Dashuk
+* @copyright Copyright (c) 2022 Volodymyr Dashuk
+*/
+
+@use 'variables' as var;
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: var.$font-family__primary;
+    color: var.$secondary-slate-grey;
+    background-color: var.$primary-black-pearl-1;
+    border: 1px solid var.$lines;
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 62px;
+    line-height: 81px;
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 42px;
+}
+
+.text,
+p {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.labels {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.code-snippets {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+}

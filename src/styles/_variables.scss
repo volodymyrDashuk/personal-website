@@ -1,0 +1,60 @@
+/**
+* @author Volodymyr Dashuk
+* @copyright Copyright (c) 2022 Volodymyr Dashuk
+*/
+
+//
+//  Colors
+//  ---------------------------------------------
+
+//  Colors for a Light Theme
+$primary-black: #01080E;
+$primary-black-pearl-1: #011627;
+$primary-black-pearl-2: #011221;
+$secondary-slate-grey: #607B96;
+$secondary-green-chill: #3C9D93;
+$secondary-blue: #4D5BCE;
+$secondary-white: #FFFFFF;
+$accent-sandy-brown: #FEA55F;
+$accent-shamrock: #43D9AD;
+$accent-shamrock: #43D9AD;
+$accent-sweet-pink: #E99287;
+$accent-wisteria: #C98BDF;
+$lines: #1E2D3D;
+
+//
+//  Common
+//  ---------------------------------------------
+$common-radius: 25px;
+
+//
+//  Typography
+//  ---------------------------------------------
+
+//  Fonts
+$font-family__primary: 'Fira Code', monospace;
+
+//  Weights
+$font-weight__thin: 200;
+$font-weight__extralight: 200;
+$font-weight__light: 300;
+$font-weight__regular: 400;
+$font-weight__medium: 500;
+$font-weight__semibold: 600;
+$font-weight__bold: 700;
+$font-weight__heavy: 900;
+
+//
+//  Breakpoints
+//  ---------------------------------------------
+
+$mobile__xxx-small: 320px;
+$mobile__xx-small: 375px;
+$mobile__x-small: 480px;
+$mobile__small: 640px;
+$mobile__default: 768px;
+$tablet__small: 992px;
+$tablet__basic: 1024px;
+$desktop__small: 1280px;
+$desktop__wxga-display: 1366px;
+$desktop__basic: 1440px;
