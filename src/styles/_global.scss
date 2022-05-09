@@ -17,6 +17,187 @@ body {
     border: 1px solid var.$lines;
 }
 
+input {
+    font-size: 16px;
+    line-height: 21px;
+    color: #465E77;
+    background: var.$primary-black-pearl-2;
+    border: 1px solid var.$lines;
+    border-radius: 8px;
+    background-clip: padding-box;
+    padding: 10px 15px;
+    vertical-align: baseline;
+    width: 100%;
+    box-sizing: border-box;
+
+    &:focus,
+    &:active {
+        border: 1px solid var.$secondary-slate-grey;
+        box-shadow: 0 0 0 2px rgba(96, 123, 150, 0.3);
+    }
+
+    &[disabled="disabled"] {
+        opacity: 0.5;
+    }
+}
+
+.form-group {
+    display: block;
+    margin-bottom: 15px;
+
+    input[type="checkbox"] + label {
+        display: block;
+        margin: 2px;
+        cursor: pointer;
+        padding: 2px;
+        font-size: 14px;
+    }
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    input[type="checkbox"] + label:before {
+        content: "\2714";
+        border: 1px solid var.$secondary-slate-grey;
+        border-radius: 2px;
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        padding-top: 2px;
+        padding-left: 2px;
+        padding-bottom: 1px;
+        margin-right: 2px;
+        vertical-align: bottom;
+        color: transparent;
+        transition: .2s;
+    }
+
+    input[type="checkbox"] + label:active:before {
+        transform: scale(0);
+    }
+
+    input[type="checkbox"]:checked + label:before {
+        background-color: var.$secondary-slate-grey;
+        border-color: var.$secondary-slate-grey;
+        color: var.$secondary-white;
+    }
+
+    input[type="checkbox"]:disabled + label:before {
+        transform: scale(1);
+        border-color: var.$secondary-slate-grey;
+        opacity: 0.5;
+    }
+
+    input[type="checkbox"]:checked:disabled + label:before {
+        transform: scale(1);
+        background-color: var.$primary-black-pearl-1;
+        border-color: var.$secondary-slate-grey;
+        opacity: 0.5;
+    }
+}
+
+a.button-primary,
+a.button-secondary {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+}
+
+a {
+    font-size: 16px;
+    line-height: 21px;
+    color: var.$secondary-slate-grey;
+
+    &:active {
+        outline: none;
+    }
+}
+
+.button-primary {
+    background-color: var.$accent-sandy-brown;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: right;
+    color: var.$primary-black;
+    padding: 10px 14px;
+
+    &:focus,
+    &:active {
+        background-color: var.$accent-sandy-brown-2;
+    }
+
+    &:hover {
+        background-color: var.$accent-sandy-brown-2;
+    }
+
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        opacity: 0.5;
+        cursor: default;
+        pointer-events: none; // Disabling of clicks
+    }
+}
+
+.button-secondary {
+    background-color: var.$primary-black-pearl-3;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: right;
+    color: var.$secondary-white;
+    padding: 10px 14px;
+
+    &:focus,
+    &:active {
+        background-color: var.$primary-black-pearl-4;
+    }
+
+    &:hover {
+        background-color: var.$primary-black-pearl-4;
+    }
+
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        opacity: 0.5;
+        cursor: default;
+        pointer-events: none; // Disabling of clicks
+    }
+}
+
+.button-transparent {
+    background-color: transparent;
+    border-radius: 8px;
+    border: 1px solid var.$secondary-white;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: right;
+    color: var.$secondary-white;
+    padding: 10px 14px;
+
+    &:focus,
+    &:active {
+        border: 1px solid rgba(255, 255, 255, 0.7);
+    }
+
+    &:hover {
+        border: 1px solid rgba(255, 255, 255, 0.7);
+    }
+
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        opacity: 0.5;
+        cursor: default;
+        pointer-events: none; // Disabling of clicks
+    }
+}
+
 h1 {
     font-weight: normal;
     font-size: 62px;
