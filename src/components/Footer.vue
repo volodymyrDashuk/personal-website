@@ -1,5 +1,151 @@
 <template>
-    <footer>
-
+    <footer class="footer">
+        <div class="footer-text">
+            find me in:
+        </div>
+        <div class="footer-links">
+            <a
+                v-for="link in links"
+                :href="link.url"
+                class="footer-link"
+                :class="link.class"
+            >
+                <span>
+                    {{link.text}}
+                </span>
+            </a>
+        </div>
     </footer>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            links: [
+                {url: '/', class: 'facebook'},
+                {url: '/about', class: 'instagram'},
+                {url: '/contact', class: "github last-link", text: ' @volodymyrDashuk'}
+            ]
+        };
+    },
+}
+</script>
+
+<style lang="scss">
+@use "src/styles/variables" as var;
+
+.footer {
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-top: 1px solid var.$lines;
+    height: auto;
+    margin-top: auto;
+
+    @media (max-width: var.$mobile__small) {
+        justify-content: space-between;
+    }
+
+    .footer-text {
+        padding: 18px 18px 18px 22px;
+        border-right: 1px solid var.$lines;
+        max-width: 150px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .footer-links {
+        display: flex;
+        align-items: center;
+        width: -webkit-fill-available;
+        height: 100%;
+
+        @media (max-width: var.$mobile__small) {
+            width: unset;
+        }
+    }
+
+    .footer-link {
+        display: flex;
+        align-items: center;
+        padding: 13px 14px;
+        height: 100%;
+
+        @media (max-width: var.$mobile__small) {
+            span {
+                display: none;
+            }
+        }
+
+        &.facebook {
+            &::after {
+                background: var.$facebook-default-icon no-repeat;
+            }
+        }
+
+        &.instagram {
+            &::after {
+                background: var.$instagram-default-icon no-repeat;
+            }
+        }
+
+        &.github {
+            padding-left: 22px;
+
+            &::after {
+                background: var.$github-default-icon no-repeat;
+                margin-left: 5px;
+            }
+        }
+
+        &:not(:last-of-type) {
+            border-right: 1px solid var.$lines;
+        }
+
+        &:first-of-type {
+            @media (max-width: var.$mobile__small) {
+                border-left: 1px solid var.$lines;
+            }
+        }
+
+        &.last-link {
+            border-left: 1px solid var.$lines;
+            margin-left: auto;
+
+            @media (max-width: var.$mobile__small) {
+                border-left: none;
+                margin-left: unset;
+            }
+        }
+
+        &::after {
+            display: inline-block;
+            content: '';
+            width: 26px;
+            height: 26px;
+        }
+
+        &:hover {
+            &.facebook {
+                &::after {
+                    background: var.$facebook-hover-icon no-repeat;
+                }
+            }
+
+            &.instagram {
+                &::after {
+                    background: var.$instagram-hover-icon no-repeat;
+                }
+            }
+
+            &.github {
+                &::after {
+                    background: var.$github-hover-icon no-repeat;
+                }
+            }
+        }
+    }
+}
+
+</style>
