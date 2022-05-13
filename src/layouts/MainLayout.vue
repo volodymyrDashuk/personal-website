@@ -14,3 +14,9 @@ export default {
     components: {Navigation, Footer}
 }
 </script>
+
+<style lang="scss">
+    .main-content {
+        height: 100%;
+    }
+</style>

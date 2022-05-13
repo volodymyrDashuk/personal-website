@@ -60,7 +60,7 @@ export default {
         position: relative;
 
         .logo {
-            flex-basis: 20%;
+            flex-basis: 311px;
             padding: 17px 22px;
             border-right: 1px solid var.$lines;
             border-bottom: 1px solid var.$lines;
