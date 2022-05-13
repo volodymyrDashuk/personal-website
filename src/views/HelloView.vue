@@ -143,7 +143,7 @@ $content-width: 1160px;
                     content: '';
                     width: 26px;
                     height: 26px;
-                    background: var.$board-screw no-repeat;
+                    background: var.$board-screw-icon no-repeat;
                 }
 
                 &.top {
