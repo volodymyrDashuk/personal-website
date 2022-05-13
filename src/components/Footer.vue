@@ -9,6 +9,7 @@
                 :href="link.url"
                 class="footer-link"
                 :class="link.class"
+                target="_blank"
             >
                 <span>
                     {{link.text}}
@@ -23,9 +24,9 @@ export default {
     data() {
         return {
             links: [
-                {url: '/', class: 'facebook'},
-                {url: '/about', class: 'instagram'},
-                {url: '/contact', class: "github last-link", text: ' @volodymyrDashuk'}
+                {url: 'https://www.facebook.com/vladimir.dashuk', class: 'facebook'},
+                {url: 'https://www.instagram.com/vladimir_dashuk/', class: 'instagram'},
+                {url: 'https://github.com/volodymyrDashuk/', class: "github last-link", text: ' @volodymyrDashuk'}
             ]
         };
     },
@@ -71,6 +72,7 @@ export default {
         align-items: center;
         padding: 13px 14px;
         height: 100%;
+        text-decoration: none;
 
         @media (max-width: var.$mobile__small) {
             span {
@@ -127,6 +129,9 @@ export default {
         }
 
         &:hover {
+            color: var.$secondary-white;
+            text-decoration: none;
+
             &.facebook {
                 &::after {
                     background: var.$facebook-hover-icon no-repeat;
