@@ -5,33 +5,33 @@ const routes = [
         path: '/',
         name: 'home',
         meta: {layout: 'main'},
-        component: () => import(/* webpackChunkName: "main" */ '../views/HelloView.vue')
+        component: () => import(/* webpackChunkName: "HelloView" */ '../views/HelloView.vue')
     },
     {
         path: '/about/bio',
         name: 'AboutMeView',
         meta: {layout: 'main'},
-        component: () => import(/* webpackChunkName: "about" */ '../views/AboutMeView.vue'),
+        component: () => import(/* webpackChunkName: "AboutMeView" */ '../views/AboutMeView.vue'),
         children: [
             {
                 path: '/about/bio',
                 name: 'Bio',
-                component: () => import(/* webpackChunkName: "about" */ '../components/Bio.vue')
+                component: () => import(/* webpackChunkName: "Bio" */ '../components/Bio.vue')
             },
             {
                 path: '/about/experience',
                 name: 'Experience',
-                component: () => import(/* webpackChunkName: "about" */ '../components/Experience.vue')
+                component: () => import(/* webpackChunkName: "Experience" */ '../components/Experience.vue')
             },
             {
                 path: '/about/interests',
                 name: 'Interests',
-                component: () => import(/* webpackChunkName: "about" */ '../components/Interests.vue')
+                component: () => import(/* webpackChunkName: "Interests" */ '../components/Interests.vue')
             },
             {
                 path: '/about/education',
                 name: 'Education',
-                component: () => import(/* webpackChunkName: "about" */ '../components/Education.vue')
+                component: () => import(/* webpackChunkName: "Education" */ '../components/Education.vue')
             }
         ]
     },
