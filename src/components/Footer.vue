@@ -43,6 +43,7 @@ export default {
     border-top: 1px solid var.$lines;
     height: auto;
     margin-top: auto;
+    z-index: 3;
 
     @media (max-width: var.$mobile__small) {
         justify-content: space-between;
@@ -98,6 +99,14 @@ export default {
             &::after {
                 background: var.$github-default-icon no-repeat;
                 margin-left: 5px;
+            }
+
+            @media (max-width: var.$mobile__small) {
+                padding-left: 14px;
+
+                &::after {
+                    margin-left: 0;
+                }
             }
         }
 

@@ -16,7 +16,13 @@ export default {
 </script>
 
 <style lang="scss">
+@use "src/styles/variables" as var;
+
     .main-content {
         height: 100%;
+
+        @media (max-width: var.$tablet__small) {
+            height: auto;
+        }
     }
 </style>

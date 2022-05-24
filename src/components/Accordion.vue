@@ -15,12 +15,12 @@
                     class="accordion-list-item"
                     v-for="item in group.items"
                 >
-                    <router-link class="accordion-list-link"
-                       :to="item.href"
+                    <a class="accordion-list-link"
+                       :href="item.href"
                        :target="item.target"
                     >
                         <span>{{item.name}}</span>
-                    </router-link>
+                    </a>
                 </li>
             </ul>
         </div>

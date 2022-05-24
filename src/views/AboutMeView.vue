@@ -30,7 +30,6 @@ export default {
         max-width: 311px;
         width: 100%;
         border-right: 1px solid var.$lines;
-        border-bottom: 1px solid var.$lines;
     }
 
     .information {
@@ -41,6 +40,7 @@ export default {
 
     .code-showcase {
         width: 50%;
+        padding: 17px 40px;
     }
 
     @media (max-width: var.$tablet__small) {
@@ -52,12 +52,13 @@ export default {
 
         .information {
             width: 100%;
-            padding: 38px 27px;
+            padding: 38px 17px;
             border-right: none;
         }
 
         .code-showcase {
             width: 100%;
+            padding: 38px 17px;
         }
     }
 }

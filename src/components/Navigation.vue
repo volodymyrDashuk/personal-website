@@ -133,10 +133,11 @@ export default {
 
             .navigation {
                 display: none;
-                position: absolute;
+                position: fixed;
                 left: 0;
                 right: 0;
-                top: 100%;
+                top: 57px;
+                bottom: 0;
                 background-color: var.$primary-black-pearl-1;
 
                 &.active {
@@ -144,6 +145,7 @@ export default {
                     flex-direction: column;
                     border-bottom: none;
                     height: calc(100vh - 56px);
+                    z-index: 2;
                 }
 
                 .navigation-link {
