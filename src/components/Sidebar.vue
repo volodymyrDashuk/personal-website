@@ -1,6 +1,6 @@
 <template>
     <aside class="sidebar">
-        <Accordion/>
+        <Accordion :accordion="accordion"/>
     </aside>
 </template>
 
@@ -8,11 +8,7 @@
 import Accordion from "@/components/Accordion";
 export default {
     components: {Accordion},
-    data() {
-        return {
-
-        };
-    },
+    props: ['accordion']
 }
 </script>
 

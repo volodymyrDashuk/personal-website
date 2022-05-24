@@ -1,7 +1,7 @@
 <template>
     <div class="accordion">
         <div class="accordion-item"
-             v-for="(group, name) in aboutMe"
+             v-for="(group, name) in accordion"
              :class="[group.open ? 'active' : '', group.name]"
         >
             <a class="accordion-title"
@@ -9,7 +9,20 @@
             >
                 <span>{{group.name}}</span>
             </a>
-            <ul class="accordion-list"
+
+            <div
+                v-if="group.checkbox"
+                v-show="group.open"
+                class="accordion-list"
+            >
+                <div class="form-group" v-for="item in group.items">
+                    <input type="checkbox" :name="item.name" :id="item.name">
+                    <label :for="item.name">{{ item.name }}</label>
+                </div>
+            </div>
+
+            <ul v-else
+                class="accordion-list"
                 v-show="group.open">
                 <li
                     class="accordion-list-item"
@@ -29,30 +42,7 @@
 
 <script>
 export default {
-    data() {
-        return {
-            aboutMe: {
-                "personalInfo": {
-                    "name": "personal-info",
-                    "open": true,
-                    "items": [
-                        { name: "bio", href: '/about/bio'},
-                        { name: "experience", href: '/about/experience' },
-                        { name: "interests", href: '/about/interests' },
-                        { name: "education", href: '/about/education' }
-                    ]
-                },
-                "contacts": {
-                    "name": "contacts",
-                    "open": true,
-                    "items": [
-                        { name: "donvov1990@gmail.com", href: 'mailto:donvov1990@gmail.com', target: '_blank'},
-                        { name: "@volodymyrDashuk", href: 'https://t.me/volodymyrDashuk', target: '_blank' },
-                    ],
-                }
-            }
-        };
-    },
+    props: ['accordion'],
 }
 </script>
 
