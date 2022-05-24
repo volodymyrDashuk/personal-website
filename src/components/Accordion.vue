@@ -15,12 +15,12 @@
                     class="accordion-list-item"
                     v-for="item in group.items"
                 >
-                    <a class="accordion-list-link"
-                       :href="item.href"
+                    <router-link class="accordion-list-link"
+                       :to="item.href"
                        :target="item.target"
                     >
                         <span>{{item.name}}</span>
-                    </a>
+                    </router-link>
                 </li>
             </ul>
         </div>
@@ -36,7 +36,7 @@ export default {
                     "name": "personal-info",
                     "open": true,
                     "items": [
-                        { name: "bio", href: '/bio'},
+                        { name: "bio", href: '/about/bio'},
                         { name: "experience", href: '/about/experience' },
                         { name: "interests", href: '/about/interests' },
                         { name: "education", href: '/about/education' }
@@ -119,6 +119,7 @@ export default {
         display: flex;
         align-items: center;
         color: var.$secondary-white;
+        cursor: pointer;
 
         &:before {
             display: inline-block;

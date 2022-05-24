@@ -41,7 +41,7 @@ export default {
             isActive: false,
             links: [
                 {title: '_hello', url: '/', exact: true},
-                {title: '_about-me', url: '/about'},
+                {title: '_about-me', url: '/about/bio'},
                 {title: '_projects', url: '/projects'},
                 {title: '_contact-me', url: '/contact', class: "last-link"}
             ]
@@ -58,24 +58,20 @@ export default {
         display: flex;
         align-items: center;
         position: relative;
+        border-bottom: 1px solid var.$lines;
 
         .logo {
-            flex-basis: 311px;
+            max-width: 311px;
+            width: 100%;
             padding: 17px 22px;
             border-right: 1px solid var.$lines;
-            border-bottom: 1px solid var.$lines;
             font-size: 16px;
             line-height: 21px;
-
-            @media (max-width: var.$desktop__small) {
-                flex-basis: 27%;
-            }
         }
 
         .navigation {
             flex-basis: 80%;
             display: flex;
-            border-bottom: 1px solid var.$lines;
 
             @media (max-width: var.$desktop__small) {
                 flex-basis: 73%;
