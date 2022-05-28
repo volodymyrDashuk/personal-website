@@ -1,5 +1,5 @@
 <template>
-    <p class="title">// Code showcase:</p>
+    <p class="title">&#x2f;&#x2f; Code showcase:</p>
     <pre v-highlightjs>
         <code class="javascript">
 class About extends Me {

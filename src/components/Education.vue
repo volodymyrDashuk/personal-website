@@ -1,11 +1,11 @@
 <template>
     <div class="education">
         <div class="mobile-title">
-            <span>// personal-info</span> / education
+            <span>&#x2f;&#x2f; personal-info</span> &#x2f; education
         </div>
 
         <div data-line-nr="01" class="code-line">
-            <span class="comment">/**</span>
+            <span class="comment">&#x2f;**</span>
         </div>
         <div data-line-nr="02" class="code-line">
             <span class="comment">*</span> Education
@@ -50,7 +50,7 @@
             <span class="comment">*</span> officia deserunt mollit anim id est laborum.
         </div>
         <div data-line-nr="16" class="code-line">
-            <span class="comment">*/</span>
+            <span class="comment">*&#x2f;</span>
         </div>
     </div>
 </template>
