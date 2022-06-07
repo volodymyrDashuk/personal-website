@@ -1,6 +1,6 @@
 <template>
     <aside class="sidebar">
-        <Accordion :accordion="accordion"/>
+        <Accordion :accordion="accordion" @checkboxChecked="checkboxChecked"/>
     </aside>
 </template>
 
@@ -8,7 +8,12 @@
 import Accordion from "@/components/Accordion";
 export default {
     components: {Accordion},
-    props: ['accordion']
+    props: ['accordion'],
+    methods: {
+        checkboxChecked(checked) {
+            this.$emit('checkboxChecked', checked);
+        }
+    }
 }
 </script>
 

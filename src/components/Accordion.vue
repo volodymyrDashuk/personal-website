@@ -16,11 +16,17 @@
                 class="accordion-list"
             >
                 <div class="form-group" v-for="item in group.items">
-                    <input type="checkbox" :name="item.name" :id="item.name">
-                    <label :for="item.name">{{ item.name }}</label>
+                    <input
+                        v-model="isSelected"
+                        type="checkbox"
+                        :name="item.name"
+                        :id="item.id"
+                        :value="item.name"
+                        @change="onChange"
+                    >
+                    <label :for="item.id">{{ item.name }}</label>
                 </div>
             </div>
-
             <ul v-else
                 class="accordion-list"
                 v-show="group.open">
@@ -42,7 +48,17 @@
 
 <script>
 export default {
-    props: ['accordion'],
+    props: ['accordion', 'isSelected'],
+    data() {
+        return {
+            isSelected: []
+        };
+    },
+    methods: {
+        onChange() {
+            this.$emit('checkboxChecked', this.isSelected);
+        }
+    }
 }
 </script>
 
