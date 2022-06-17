@@ -23,7 +23,8 @@ body {
     height: 100%;
 }
 
-input {
+input,
+textarea{
     font-size: 16px;
     line-height: 21px;
     color: #465E77;
@@ -45,6 +46,18 @@ input {
     &[disabled="disabled"] {
         opacity: 0.5;
     }
+}
+
+.error-message {
+    color: var.$accent-wisteria;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 12px;
+}
+
+textarea {
+    max-height: 250px;
+    min-height: 150px;
 }
 
 .form-group {
@@ -235,4 +248,20 @@ p {
     font-weight: normal;
     font-size: 16px;
     line-height: 21px;
+}
+
+.rose {
+    color: var.$accent-wisteria;
+}
+
+.blue {
+    color: var.$secondary-blue-2;
+}
+
+.orange {
+    color: var.$accent-sandy-brown;
+}
+
+.gray {
+    color: var.$secondary-slate-grey;
 }

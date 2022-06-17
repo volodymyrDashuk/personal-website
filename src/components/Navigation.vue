@@ -70,7 +70,7 @@ export default {
         }
 
         .navigation {
-            flex-basis: 80%;
+            flex-basis: 100%;
             display: flex;
 
             @media (max-width: var.$desktop__small) {
