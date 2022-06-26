@@ -43,6 +43,7 @@ export default {
                 {title: '_hello', url: '/', exact: true},
                 {title: '_about-me', url: '/about/bio'},
                 {title: '_projects', url: '/projects'},
+                {title: '_blog', url: '/blog'},
                 {title: '_contact-me', url: '/contact', class: "last-link"}
             ]
         };
@@ -79,7 +80,7 @@ export default {
 
             .navigation-link {
                 display: inline-block;
-                font-size: 16px;
+                font-size: 15px;
                 line-height: 21px;
                 color: var.$secondary-slate-grey;
                 text-decoration: none;
