@@ -39,12 +39,6 @@
 <script>
 export default {
     props: ['cards'],
-    data() {
-        return {
-
-
-        };
-    },
 }
 </script>
 

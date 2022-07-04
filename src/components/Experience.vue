@@ -3,7 +3,6 @@
         <div class="mobile-title">
             <span>&#x2f;&#x2f; personal-info</span> &#x2f; experience
         </div>
-
         <div data-line-nr="01" class="code-line">
             <span class="comment">&#x2f;**</span>
         </div>

@@ -1,6 +1,6 @@
 <template>
     <div class="contact">
-        <Sidebar :accordion="contacts"/>
+        <Sidebar :accordion="getContacts"/>
         <div class="content">
             <ContactUsForm @name="changeName" @email="changeEmail" @message="changeMessage"/>
             <ContactUsCodeShowcase :name="name" :email="email" :message="message"/>
@@ -12,22 +12,11 @@
 import Sidebar from "@/components/Sidebar";
 import ContactUsForm from "@/components/ContactMeForm";
 import ContactUsCodeShowcase from "@/components/ContactMeCodeShowcase";
-
+import {mapGetters} from "vuex";
 export default {
     components: {Sidebar, ContactUsForm, ContactUsCodeShowcase},
     data() {
         return {
-            contacts: {
-                "contacts": {
-                    "name": "contacts",
-                    "open": true,
-                    "checkbox": false,
-                    "items": [
-                        { name: "donvov1990@gmail.com", href: 'mailto:donvov1990@gmail.com', target: '_blank'},
-                        { name: "@volodymyrDashuk", href: 'https://t.me/volodymyrDashuk', target: '_blank' }
-                    ]
-                }
-            },
             name: '',
             email: '',
             message: ''
@@ -43,6 +32,9 @@ export default {
         changeMessage(message) {
             this.message = message
         }
+    },
+    computed: {
+        ...mapGetters(['getContacts'])
     }
 }
 </script>

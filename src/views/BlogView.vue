@@ -1,6 +1,6 @@
 <template>
     <div class="blog-page">
-        <Sidebar :accordion="blogAccordion" @checkboxChecked="checkboxChecked"/>
+        <Sidebar :accordion="getBlogAccordion" @checkboxChecked="checkboxChecked"/>
         <div class="content">
             <div class="blog-list">
                 <BlogList :cards="computedTech"/>
@@ -13,57 +13,12 @@
 import Sidebar from "@/components/Sidebar";
 import ProjectItem from "@/components/ProjectItem";
 import BlogList from "@/components/BlogList";
+import {mapGetters} from "vuex";
 
 export default {
     components: {BlogList, Sidebar, ProjectItem},
     data() {
         return {
-            blogAccordion: {
-                "projects": {
-                    "name": "blog",
-                    "open": true,
-                    "checkbox": true,
-                    "items": [
-                        {id: 1, name: "Magento 2", href: '/' },
-                        {id: 2,  name: "HTML", href: '/' },
-                        {id: 2,  name: "CSS", href: '/' },
-                        {id: 3,  name: "JavaScript", href: '/' },
-                        {id: 4,  name: "Vue.js", href: '/' }
-                    ]
-                }
-            },
-            blogCard: [
-                {
-                    id: 1,
-                    name: 'How install Magento 2',
-                    image_path: 'assets/images/project-list-images/project_1.png',
-                    image_alt: 'alt',
-                    icon: [''],
-                    text: 'lorem ipsum text lorem ipsum text',
-                    link_url: '/',
-                    tech: 'CSS',
-                },
-                {
-                    id: 2,
-                    name: 'CMS pages and Blocks',
-                    image_path: 'assets/images/project-list-images/project_2.png',
-                    image_alt: 'alt2',
-                    icon: [''],
-                    text: 'Duis aute irure dolor in velit esse cillum dolore. Duis aute irure dolor in velit esse cillum dolore.',
-                    link_url: '/',
-                    tech: 'HTML'
-                },
-                {
-                    id: 3,
-                    name: 'Theme customization',
-                    image_path: 'assets/images/project-list-images/project_3.png',
-                    image_alt: 'alt3',
-                    icon: [''],
-                    text: 'Duis aute irure dolor in velit esse cillum dolore.',
-                    link_url: '/',
-                    tech: ['Magento 2']
-                }
-            ],
             checked: []
         };
     },
@@ -75,9 +30,9 @@ export default {
     computed: {
         computedTech () {
             if (this.checked.length === 0) {
-                return this.blogCard;
+                return this.getBlogCard;
             } else {
-                return this.blogCard.filter(card => {
+                return this.getBlogCard.filter(card => {
                     if(typeof card.tech === 'string') {
                         return this.checked.indexOf(card.tech) !== -1
                     }
@@ -87,7 +42,9 @@ export default {
                     }
                 });
             }
-        }
+        },
+
+        ...mapGetters(['getBlogAccordion', 'getBlogCard'])
     }
 }
 </script>

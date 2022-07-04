@@ -1,6 +1,6 @@
 <template>
     <div class="about">
-        <Sidebar :accordion="aboutMe"/>
+        <Sidebar :accordion="getAboutMe"/>
         <div class="information">
             <router-view/>
         </div>
@@ -14,33 +14,12 @@
 import Sidebar from "@/components/Sidebar";
 import Bio from "@/components/Bio";
 import CodeShowcase from "@/components/CodeShowcase";
+import {mapGetters} from "vuex";
+
 export default {
     components: {CodeShowcase, Sidebar, Bio},
-    data() {
-        return {
-            aboutMe: {
-                "personalInfo": {
-                    "name": "personal-info",
-                    "open": true,
-                    "checkbox": false,
-                    "items": [
-                        { name: "bio", href: '/about/bio'},
-                        { name: "experience", href: '/about/experience' },
-                        { name: "interests", href: '/about/interests' },
-                        { name: "education", href: '/about/education' }
-                    ]
-                },
-                "contacts": {
-                    "name": "contacts",
-                    "open": true,
-                    "checkbox": false,
-                    "items": [
-                        { name: "donvov1990@gmail.com", href: 'mailto:donvov1990@gmail.com', target: '_blank'},
-                        { name: "@volodymyrDashuk", href: 'https://t.me/volodymyrDashuk', target: '_blank' }
-                    ]
-                }
-            }
-        }
+    computed: {
+        ...mapGetters(['getAboutMe'])
     }
 }
 </script>
