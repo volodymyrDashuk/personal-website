@@ -1,37 +1,35 @@
 <template>
     <div
         class="project"
-        v-for="item in cards"
     >
         <div class="project-title">
-            <span class="name">Project {{ item.id }} </span>
-            &#x2f;&#x2f; {{ item.name }}
+            <span class="name">Project {{ cards.id }} </span>
+            &#x2f;&#x2f; _{{ cards.name }}
         </div>
         <div class="card">
             <div class="card-header">
                 <img
-                    :src="item.image_path"
-                    :alt="item.image_alt"
+                    :src="`assets/images/project-list-images/${cards.image_path}`"
+                    :alt="cards.image_alt"
                 >
                 <div class="icons"
                 >
                     <div
-                        v-for="icon in item.icon"
+                        v-for="icon in cards.icon"
                         class="icon"
                         :class="icon"
                     />
                 </div>
             </div>
             <div class="card-text">
-                <p>{{ item.text }}</p>
+                <p>{{ cards.card_text }}</p>
             </div>
             <div class="card-link">
-                <a
-                    :href="item.link_url"
-                    class="button-secondary"
+                <router-link class="button-secondary"
+                             :to="{ name: 'ProjectDetail', params: {id: cards.id} }"
                 >
                     view-project
-                </a>
+                </router-link>
             </div>
         </div>
     </div>

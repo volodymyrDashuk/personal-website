@@ -15,27 +15,46 @@ export default {
                 ]
             }
         },
-        projectsCard: [
+        projectsList: [
             {
                 id: 1,
-                name: 'topsity',
-                image_path: 'assets/images/project-list-images/topsity.png',
-                image_alt: 'project',
+                name: 'pollardi',
+                slug: 'pollardi',
+                image_path: 'pollardi.jpeg',
+                image_alt: 'Pollardi Fashion Group',
                 icon: ['icon-html', 'icon-css', 'icon-js'],
-                text: 'Top City Service is an online store for the engineering team.',
-                link_url: '/',
+                card_text: 'Pollardi Fashion Group is a brand of wedding and evening dresses',
                 tech: ['CSS', 'JavaScript'],
-                routeComponentName: 'topsity'
+                routeComponentName: 'pollardi',
+                detail: {
+                    image: ['pollardi/homepage.png', 'pollardi/checkout.png', 'pollardi/pdp.png', 'pollardi/blog.png', 'pollardi/store_location.png'],
+                    image_alt: 'project images',
+                    tags: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
+                    title: 'Pollardi',
+                    subtitle: 'Pollardi Fashion Group is a brand of wedding and evening dresses',
+                    text: 'Pollardi Fashion Group is a young Ukrainian company, as well as the largest brand in Ukraine and the largest factory of wedding dresses in Europe.',
+                    link: 'https://pollardi.com/'
+                }
             },
             {
                 id: 2,
-                name: 'tetris-game',
-                image_path: 'assets/images/project-list-images/project_2.png',
-                image_alt: 'alt2',
-                icon: ['icon-html'],
-                text: 'Duis aute irure dolor in velit esse cillum dolore. Duis aute irure dolor in velit esse cillum dolore.',
-                link_url: '/',
-                tech: 'HTML'
+                name: 'topsity',
+                slug: 'topsity',
+                image_path: 'topsity.png',
+                image_alt: 'topsity',
+                icon: ['icon-html', 'icon-css', 'icon-js'],
+                card_text: 'Top City Service is an online store for the engineering team.',
+                tech: ['CSS', 'JavaScript'],
+                routeComponentName: 'topsity',
+                detail: {
+                    image: ['topsity/img1.jpeg', 'topsity/img2.jpeg', 'topsity/img3.jpeg', 'topsity/img4.gif', 'topsity/img5.jpeg'],
+                    image_alt: 'topsity',
+                    tags: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
+                    title: 'Top Sity',
+                    subtitle: 'Online store engineering company.',
+                    text: 'Top City Service is an online store for the engineering team. They are one of the leading companies in the field of industrial automation components and equipment for various industries.',
+                    link: 'https://topsity.com.ua/'
+                }
             },
             {
                 id: 3,
@@ -59,8 +78,8 @@ export default {
         getProjectsAccordion(state) {
             return state.projectsAccordion
         },
-        getProjectsCard(state) {
-            return state.projectsCard
+        getProjectList(state) {
+            return state.projectsList
         }
     }
 }

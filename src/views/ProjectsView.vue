@@ -3,7 +3,10 @@
         <Sidebar :accordion="getProjectsAccordion" @checkboxChecked="checkboxChecked"/>
         <div class="content">
             <div class="projects-list">
-                <ProjectItem :cards="computedTech"/>
+                <ProjectItem
+                    v-for="item in computedTech"
+                    :cards="item"
+                />
             </div>
         </div>
     </div>
@@ -28,9 +31,9 @@ export default {
     computed: {
         computedTech () {
             if (this.checked.length === 0) {
-                return this.getProjectsCard;
+                return this.getProjectList;
             } else {
-                return this.getProjectsCard.filter(card => {
+                return this.getProjectList.filter(card => {
                     if(typeof card.tech === 'string') {
                         return this.checked.indexOf(card.tech) !== -1
                     }
@@ -42,7 +45,7 @@ export default {
             }
         },
 
-        ...mapGetters(['getProjectsAccordion', 'getProjectsCard'])
+        ...mapGetters(['getProjectsAccordion', 'getProjectList'])
     }
 }
 </script>

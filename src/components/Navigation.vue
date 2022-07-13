@@ -43,7 +43,6 @@ export default {
                 {title: '_hello', url: '/', exact: true},
                 {title: '_about-me', url: '/about/bio'},
                 {title: '_projects', url: '/projects'},
-                {title: '_blog', url: '/blog'},
                 {title: '_contact-me', url: '/contact', class: "last-link"}
             ]
         };
