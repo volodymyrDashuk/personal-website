@@ -86,6 +86,10 @@ export default {
                 overflow: unset;
                 max-height: unset;
             }
+
+            .img:not(:last-of-type) {
+                margin-bottom: 10px;
+            }
         }
 
         .project-content {

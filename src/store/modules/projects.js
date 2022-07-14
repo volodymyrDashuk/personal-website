@@ -24,7 +24,7 @@ export default {
                 image_alt: 'Pollardi Fashion Group',
                 icon: ['icon-html', 'icon-css', 'icon-js'],
                 card_text: 'Pollardi Fashion Group is a brand of wedding and evening dresses',
-                tech: ['CSS', 'JavaScript'],
+                tech: ['HTML', 'CSS', 'JavaScript'],
                 routeComponentName: 'pollardi',
                 detail: {
                     image: ['pollardi/homepage.png', 'pollardi/checkout.png', 'pollardi/pdp.png', 'pollardi/blog.png', 'pollardi/store_location.png'],
@@ -44,7 +44,7 @@ export default {
                 image_alt: 'topsity',
                 icon: ['icon-html', 'icon-css', 'icon-js'],
                 card_text: 'Top City Service is an online store for the engineering team.',
-                tech: ['CSS', 'JavaScript'],
+                tech: ['HTML', 'CSS', 'JavaScript'],
                 routeComponentName: 'topsity',
                 detail: {
                     image: ['topsity/img1.jpeg', 'topsity/img2.jpeg', 'topsity/img3.jpeg', 'topsity/img4.gif', 'topsity/img5.jpeg'],
@@ -58,13 +58,43 @@ export default {
             },
             {
                 id: 3,
-                name: 'ethereum',
-                image_path: 'assets/images/project-list-images/project_3.png',
-                image_alt: 'alt3',
-                icon: ['icon-react', 'icon-html'],
-                text: 'Duis aute irure dolor in velit esse cillum dolore.',
-                link_url: '/',
-                tech: ['React', 'HTML']
+                name: 'SpecKomunTrans',
+                slug: 'speckomuntrans',
+                image_path: 'sct.jpeg',
+                image_alt: 'SpecKomunTrans',
+                icon: ['icon-html', 'icon-css', 'icon-js'],
+                card_text: 'Services for the removal, processing and disposal of household waste provided in the settlement in accordance with the rules for the improvement of the territory of Khmelnitsky.',
+                tech: ['HTML', 'CSS', 'JavaScript'],
+                routeComponentName: 'speckomuntrans',
+                detail: {
+                    image: ['sct/sct.png'],
+                    image_alt: 'SpecKomunTrans',
+                    tags: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
+                    title: 'SpecKomunTrans',
+                    subtitle: '',
+                    text: 'Services for the handling of special equipment and transportation of waste by dump trucks for subsequent disposal in a landfill.',
+                    link: 'https://skt.km.ua/'
+                }
+            },
+            {
+                id: 4,
+                name: 'European consulting group',
+                slug: 'eusg',
+                image_path: 'eusg.png',
+                image_alt: 'EuCG',
+                icon: ['icon-html', 'icon-css', 'icon-js'],
+                card_text: 'International company of the administrative-legal and tax consulting for midsize and small business.',
+                tech: ['HTML', 'CSS', 'JavaScript'],
+                routeComponentName: 'speckomuntrans',
+                detail: {
+                    image: ['eusg/hp.png', 'eusg/hp.gif', 'eusg/blog.png' ,'eusg/contact.gif'],
+                    image_alt: 'EuCG',
+                    tags: ['HTML', 'CSS', 'JavaScript'],
+                    title: 'European consulting group',
+                    subtitle: '',
+                    text: 'Services for the handling of special equipment and transportation of waste by dump trucks for subsequent disposal in a landfill.',
+                    link: 'https://skt.km.ua/'
+                }
             }
         ],
     },

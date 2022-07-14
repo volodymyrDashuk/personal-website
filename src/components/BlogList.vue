@@ -49,6 +49,9 @@ $react-color: #86E1F9;
 $vue-color: #81D4AF;
 $html-color: #FFA67E;
 $css-color: #95D6F0;
+$js-color: #F7DF1E;
+$bootstrap-color: #5B4282;
+$magento-color: #EC6737;
 
 @use "src/styles/variables" as var;
 
@@ -134,6 +137,30 @@ $css-color: #95D6F0;
 
                 &::after {
                     background: var.$css-icon no-repeat;
+                }
+            }
+
+            .icon-js {
+                background-color: $js-color;
+
+                &::after {
+                    background: var.$js-icon no-repeat;
+                }
+            }
+
+            .icon-bootstrap {
+                background-color: $bootstrap-color;
+
+                &::after {
+                    background: var.$bootstrap-icon no-repeat;
+                }
+            }
+
+            .icon-magento {
+                background-color: $magento-color;
+
+                &::after {
+                    background: var.$magento-icon no-repeat;
                 }
             }
         }
