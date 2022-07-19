@@ -6,10 +6,10 @@ export default {
                 "open": true,
                 "checkbox": false,
                 "items": [
-                    { name: "bio", href: '/about/bio'},
-                    { name: "experience", href: '/about/experience' },
-                    { name: "interests", href: '/about/interests' },
-                    { name: "education", href: '/about/education' }
+                    { name: "bio", href: '/about/bio', colorFolder: 'green-folder' },
+                    { name: "experience", href: '/about/experience', colorFolder: 'rose-folder' },
+                    { name: "interests", href: '/about/interests', colorFolder: 'blue-folder' },
+                    { name: "education", href: '/about/education', colorFolder: 'yellow-folder'  }
                 ]
             },
             "contacts": {

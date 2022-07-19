@@ -37,6 +37,7 @@
                     <a class="accordion-list-link"
                        :href="item.href"
                        :target="item.target"
+                       :class="item?.colorFolder"
                     >
                         <span>{{item.name}}</span>
                     </a>
@@ -94,8 +95,28 @@ export default {
         &.personal-info {
             .accordion-list-item {
                 .accordion-list-link {
-                    &:before {
-                        background: var.$folder-icon no-repeat;
+                    &.green-folder {
+                        &:before {
+                            background: var.$folder-green-icon no-repeat;
+                        }
+                    }
+
+                    &.rose-folder {
+                        &:before {
+                            background: var.$folder-rose-icon no-repeat;
+                        }
+                    }
+
+                    &.blue-folder {
+                        &:before {
+                            background: var.$folder-blue-icon no-repeat;
+                        }
+                    }
+
+                    &.yellow-folder {
+                        &:before {
+                            background: var.$folder-yellow-icon no-repeat;
+                        }
                     }
                 }
             }
