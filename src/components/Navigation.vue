@@ -20,7 +20,7 @@
                 :to="link.url"
                 :exact="link.exact"
                 :title="link.title"
-                @click="isActive = !isActive"
+                @click="closeNavigation"
             >
                 {{ link.title }}
             </router-link>
@@ -40,6 +40,7 @@ export default {
     data() {
         return {
             isActive: false,
+            isMobile: true,
             links: [
                 {title: '_hello', url: '/', exact: true},
                 {title: '_about-me', url: '/about/bio'},
@@ -48,6 +49,25 @@ export default {
             ]
         };
     },
+    mounted() {
+        this.onResize();
+        window.addEventListener("resize", this.onResize, { passive: true });
+    },
+    methods: {
+        onResize() {
+            this.isMobile = window.innerWidth < 991;
+        },
+        closeNavigation() {
+            if (this.isMobile) {
+                this.isActive = !this.isActive
+            }
+        }
+    },
+    beforeDestroy() {
+        if (typeof window !== "undefined") {
+            window.removeEventListener("resize", this.onResize, { passive: true });
+        }
+    }
 }
 </script>
 
