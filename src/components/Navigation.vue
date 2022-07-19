@@ -61,7 +61,6 @@ export default {
         border-bottom: 1px solid var.$lines;
 
         .logo {
-            max-width: 311px;
             width: 100%;
             padding: 17px 22px;
             border-right: 1px solid var.$lines;
@@ -70,12 +69,7 @@ export default {
         }
 
         .navigation {
-            flex-basis: 100%;
             display: flex;
-
-            @media (max-width: var.$desktop__small) {
-                flex-basis: 73%;
-            }
 
             .navigation-link {
                 display: inline-block;
@@ -117,6 +111,15 @@ export default {
     //  Desktop
     @media (min-width: var.$tablet__small) {
         .header {
+            .logo {
+                width: 20%;
+                min-width: 260px;
+            }
+
+            .navigation {
+                width: 80%;
+            }
+
             .navigation-mobile-collapse {
                 display: none;
             }
@@ -128,7 +131,6 @@ export default {
         .header {
             .logo {
                 border-right: none;
-                flex-basis: 100%;
             }
 
             .navigation {

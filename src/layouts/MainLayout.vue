@@ -19,10 +19,6 @@ export default {
 @use "src/styles/variables" as var;
 
     .main-content {
-        height: 100%;
-
-        @media (max-width: var.$tablet__small) {
-            height: auto;
-        }
+        height: calc(100vh - 55px - 56px);
     }
 </style>

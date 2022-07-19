@@ -58,16 +58,19 @@ export default {
     display: flex;
 
     .sidebar {
-        max-width: 311px;
-        width: 100%;
         border-right: 1px solid var.$lines;
+
+        @media (min-width: var.$tablet__small) {
+            min-width: 260px;
+            width: 20%;
+        }
     }
 
     .content {
-        width: 100%;
         padding: 80px 17px 17px 80px;
 
         @media (min-width: var.$tablet__small) {
+            width: 80%;
             overflow: scroll;
             max-height: 860px;
         }

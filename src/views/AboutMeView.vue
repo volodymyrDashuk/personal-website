@@ -32,20 +32,31 @@ export default {
     display: flex;
 
     .sidebar {
-        max-width: 311px;
-        width: 100%;
         border-right: 1px solid var.$lines;
+
+        @media (min-width: var.$tablet__small) {
+            min-width: 260px;
+            width: 20%;
+        }
     }
 
     .information {
-        width: 50%;
         padding: 17px 17px 17px 80px;
         border-right: 1px solid var.$lines;
+        overflow-y: scroll;
+
+        @media (min-width: var.$tablet__small) {
+            width: 34%;
+        }
     }
 
     .code-showcase {
-        width: 50%;
         padding: 17px 40px;
+        overflow-y: scroll;
+
+        @media (min-width: var.$tablet__small) {
+            width: 46%;
+        }
     }
 
     @media (max-width: var.$tablet__small) {

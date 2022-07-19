@@ -47,25 +47,33 @@ export default {
     display: flex;
 
     .sidebar {
-        max-width: 311px;
-        width: 100%;
         border-right: 1px solid var.$lines;
+
+        @media (min-width: var.$tablet__small) {
+            min-width: 260px;
+            width: 20%;
+        }
     }
 
     .content {
-        width: 100%;
         display: flex;
+
+        @media (min-width: var.$tablet__small) {
+            width: 80%;
+        }
     }
 
     .contact-form {
         padding: 100px 5% 17px;
         width: 40%;
         border-right: 1px solid var.$lines;
+        overflow-y: scroll;
     }
 
     .code-showcase {
         padding: 100px 7% 17px;
         width: 60%;
+        overflow-y: scroll;
     }
 
     @media (max-width: var.$tablet__small) {

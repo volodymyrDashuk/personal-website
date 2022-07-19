@@ -11,45 +11,69 @@
             <span class="comment">*</span> About me
         </div>
         <div data-line-nr="03" class="code-line">
-            <span class="comment">*</span> I have 5 years of еxperience in web
+            <span class="comment">*</span> I am a Front-end developer with
         </div>
         <div data-line-nr="04" class="code-line">
-            <span class="comment">*</span> development lorem ipsum dolor sit amet,
+            <span class="comment">*</span> 4 years of commercial experience.
         </div>
         <div data-line-nr="05" class="code-line">
-            <span class="comment">*</span> consectetur adipiscing elit, sed do eiusmod
-        </div>
-        <div data-line-nr="06" class="code-line">
-            <span class="comment">*</span> tempor incididunt ut labore et dolore
-        </div>
-        <div data-line-nr="07" class="code-line">
-            <span class="comment">*</span> magna aliqua. Ut enim ad minim veniam,
-        </div>
-        <div data-line-nr="08" class="code-line">
-            <span class="comment">*</span> quis nostrud exercitation ullamco laboris
-        </div>
-        <div data-line-nr="09" class="code-line">
-            <span class="comment">*</span> nisi ut aliquip ex ea commodo consequat.
-        </div>
-        <div data-line-nr="10" class="code-line">
-            <span class="comment">*</span> Duis aute irure dolor in reprehenderit in
-        </div>
-        <div data-line-nr="11" class="code-line">
             <span class="comment">*</span>
         </div>
+        <div data-line-nr="06" class="code-line">
+            <span class="comment">*</span> I enjoy solving issues,
+        </div>
+        <div data-line-nr="07" class="code-line">
+            <span class="comment">*</span> creating smart user interfaces,
+        </div>
+        <div data-line-nr="08" class="code-line">
+            <span class="comment">*</span> developing extensive web experience
+        </div>
+        <div data-line-nr="09" class="code-line">
+            <span class="comment">*</span> and web applications.
+        </div>
+        <div data-line-nr="10" class="code-line">
+            <span class="comment">*</span> I use HTML, CSS, and JavaScript
+        </div>
+        <div data-line-nr="11" class="code-line">
+            <span class="comment">*</span> to create adaptive websites
+        </div>
         <div data-line-nr="12" class="code-line">
-            <span class="comment">*</span> Duis aute irure dolor in reprehenderit in
+            <span class="comment">*</span> and web applications
         </div>
         <div data-line-nr="13" class="code-line">
-            <span class="comment">*</span> voluptate velit esse cillum dolore eu fugiat
+            <span class="comment">*</span> that give users the best
         </div>
         <div data-line-nr="14" class="code-line">
-            <span class="comment">*</span> nulla pariatur. Excepteur sint occaecat
+            <span class="comment">*</span> and most appropriate experience
         </div>
         <div data-line-nr="15" class="code-line">
-            <span class="comment">*</span> officia deserunt mollit anim id est laborum.
+            <span class="comment">*</span> suitable for their devices and browsers.
         </div>
         <div data-line-nr="16" class="code-line">
+            <span class="comment">*</span>
+        </div>
+        <div data-line-nr="17" class="code-line">
+            <span class="comment">*</span> I write standards-based code that is semantic,
+        </div>
+        <div data-line-nr="18" class="code-line">
+            <span class="comment">*</span> accessible and easy to maintain,
+        </div>
+        <div data-line-nr="19" class="code-line">
+            <span class="comment">*</span> cross-browser and productive.
+        </div>
+        <div data-line-nr="20" class="code-line">
+            <span class="comment">*</span>
+        </div>
+        <div data-line-nr="21" class="code-line">
+            <span class="comment">*</span> I build successful adaptive websites
+        </div>
+        <div data-line-nr="22" class="code-line">
+            <span class="comment">*</span> that are fast, easy to use,
+        </div>
+        <div data-line-nr="23" class="code-line">
+            <span class="comment">*</span> and built using best practices.
+        </div>
+        <div data-line-nr="24" class="code-line">
             <span class="comment">*&#x2f;</span>
         </div>
     </div>
