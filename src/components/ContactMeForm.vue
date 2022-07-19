@@ -1,5 +1,11 @@
 <template>
-    <form class="contact-form" @submit.prevent="submitForm">
+    <form
+        class="contact-form"
+        @submit.prevent="sendEmail"
+        method="POST"
+        role="form"
+        v-if="isSend === false"
+    >
         <div class="form-group">
             <label
                 class="label"
@@ -51,11 +57,32 @@
             <button type="submit" class="button-secondary">submit-message</button>
         </div>
     </form>
+    <div
+        v-else
+        class="submitted-section"
+    >
+        <div class="submitted-title">
+            <h2>Thank you! &#129304;</h2>
+        </div>
+       <div class="submitted-text">
+           <p>Your message has been accepted.</p>
+           <p>You will recieve answer really soon!</p>
+       </div>
+        <div class="form-group">
+            <button
+                class="button-secondary"
+                @click="reSend"
+            >
+                send-new-message
+            </button>
+        </div>
+    </div>
 </template>
 
 <script>
 import useValidate from '@vuelidate/core';
 import { required, email } from  '@vuelidate/validators';
+import axios from 'axios';
 
 export default {
     emits: ['name', 'email', 'message'],
@@ -75,7 +102,8 @@ export default {
             v$: useValidate(),
             name: '',
             email: '',
-            message: ''
+            message: '',
+            isSend: false,
         };
     },
     validations() {
@@ -85,11 +113,33 @@ export default {
             message: { required }
         }
     },
+
     methods: {
-        submitForm() {
+        sendEmail() {
             this.v$.$touch();
             if (this.v$.$error) return
-            alert('work')
+
+            axios.post('https://formspree.io/f/mayvreew',{
+                name: this.name,
+                from: this.email,
+                _subject: 'Message from personal web',
+                message: this.message
+            }).then((response) => {
+                this.name = '';
+                this.email = '';
+                this.message = '';
+                this.$nextTick(() => {
+                    this.v$.$reset()
+                })
+                this.isSend = true;
+            }).catch((error) => {
+                if (error.response) {
+                    console.log(error.response)
+                }
+            })
+        },
+        reSend() {
+            this.isSend = false;
         }
     }
 }

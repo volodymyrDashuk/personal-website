@@ -63,11 +63,20 @@ export default {
         }
     }
 
-    .contact-form {
+    .contact-form,
+    .submitted-section {
         padding: 100px 5% 17px;
         width: 40%;
         border-right: 1px solid var.$lines;
         overflow-y: scroll;
+    }
+
+    .submitted-section {
+        text-align: center;
+
+        .submitted-text {
+            margin-bottom: 20px;
+        }
     }
 
     .code-showcase {
@@ -87,7 +96,8 @@ export default {
             flex-direction: column;
         }
 
-        .contact-form {
+        .contact-form,
+        .submitted-section {
             width: 100%;
             padding: 38px 17px;
             border-right: none;
