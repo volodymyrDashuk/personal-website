@@ -60,6 +60,7 @@ $magento-color: #EC6737;
 
 @use "src/styles/variables" as var;
 
+//  Common
 .project {
     max-width: 370px;
     width: 100%;

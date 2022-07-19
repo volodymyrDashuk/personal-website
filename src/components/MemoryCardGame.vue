@@ -106,6 +106,7 @@ export default {
 <style lang="scss">
 @use "src/styles/variables" as var;
 
+//  Common
 .memory-card-game {
     .board-game {
         display: flex;

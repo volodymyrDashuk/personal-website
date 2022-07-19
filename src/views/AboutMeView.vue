@@ -1,5 +1,5 @@
 <template>
-    <div class="about">
+    <div class="about content-wrapper">
         <Sidebar :accordion="getAboutMe"/>
         <div class="information">
             <router-view/>
@@ -27,27 +27,12 @@ export default {
 <style lang="scss">
 @use "src/styles/variables" as var;
 
+//  Common
 .about {
-    height: 100%;
-    display: flex;
-
-    .sidebar {
-        border-right: 1px solid var.$lines;
-
-        @media (min-width: var.$tablet__small) {
-            min-width: 260px;
-            width: 20%;
-        }
-    }
-
     .information {
         padding: 17px 17px 17px 80px;
         border-right: 1px solid var.$lines;
         overflow-y: scroll;
-
-        @media (min-width: var.$tablet__small) {
-            width: 34%;
-        }
     }
 
     .code-showcase {
@@ -59,13 +44,35 @@ export default {
         }
     }
 
-    @media (max-width: var.$tablet__small) {
-        flex-direction: column;
+    .code-line {
+        z-index: 1;
+        position: relative;
+        margin-bottom: 10px;
 
-        .sidebar {
-            max-width: none;
+        .mobile-title {
+            display: none;
         }
 
+        &:after {
+            content: attr(data-line-nr);
+            position: absolute;
+            left: -40px;
+            color: #607B96;
+            z-index: 3;
+            top: 0;
+        }
+    }
+
+    .comment-content {
+        .mobile-title {
+            display: none;
+        }
+    }
+}
+
+//  Mobile
+@media (max-width: var.$tablet__small) {
+    .about {
         .information {
             width: 100%;
             padding: 38px 17px;
@@ -76,6 +83,52 @@ export default {
             width: 100%;
             padding: 38px 17px;
         }
+
+        .code-line {
+            display: inline-block;
+
+            .mobile-title {
+                display: block;
+                margin-bottom: 17px;
+
+                span {
+                    color: var.$secondary-white-2
+                }
+            }
+
+            &:after {
+                content: none;
+            }
+
+            .comment {
+                display: none;
+            }
+
+            &.mobile-next-line {
+                display: block;
+            }
+        }
+
+        .comment-content {
+            .mobile-title {
+                display: block;
+                margin-bottom: 17px;
+
+                span {
+                    color: var.$secondary-white-2
+                }
+            }
+        }
     }
 }
+
+//  Desktop
+@media (min-width: var.$tablet__small) {
+    .about {
+        .information {
+            width: 34%;
+        }
+    }
+}
+
 </style>

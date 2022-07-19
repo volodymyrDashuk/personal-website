@@ -36,133 +36,140 @@ export default {
 // Local Variables
 $content-width: 1160px;
 
-    .home {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: 100%;
-        max-width: $content-width;
+//  Common
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    max-width: $content-width;
+    width: 100%;
+    margin: 0 auto;
+
+    @media (max-width: $content-width) {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+    }
+
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        right: -35%;
+        top: 0;
+        background: var.$game-background no-repeat;
         width: 100%;
-        margin: 0 auto;
+        height: 100%;
+        z-index: -1;
+    }
 
-        @media (max-width: $content-width) {
-            padding-left: 20px;
-            padding-right: 20px;
-            padding-top: 20px;
+
+    .info {
+        padding-right: 2%;
+
+        .greeting {
+            color: var.$secondary-white-2;
         }
 
-        &:before {
-            content: "";
-            display: block;
+        .name {
+            color: var.$secondary-white-2;
+        }
+
+        .position {
+            color: var.$secondary-blue;
+            margin-bottom: 80px;
+        }
+
+        .code {
+            font-size: 16px;
+            line-height: 21px;
+            margin-bottom: 10px;
+        }
+
+        .expression {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .variables {
+            color: var.$secondary-blue;
+        }
+
+        .value {
+            color: var.$accent-shamrock;
+        }
+
+        .assignment {
+            color: var.$secondary-white;
+        }
+
+        .github-link {
+            color: var.$accent-sweet-pink;
+        }
+    }
+
+    .game {
+        max-width: 500px;
+        width: 100%;
+        padding: 35px 35px 35px 30px;
+        position: relative;
+
+        background: linear-gradient(150.26deg, rgba(23, 85, 83, 0.7) 1.7%, rgba(67, 217, 173, 0.091) 81.82%);
+        border: 1px solid #0C1616;
+        box-shadow: inset 0px 2px 0px rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(64px);
+        /* Note: backdrop-filter has minimal browser support */
+
+        border-radius: 8px;
+
+        .board-screw {
             position: absolute;
-            right: -35%;
-            top: 0;
-            background: var.$game-background no-repeat;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
 
-            @media (max-width: var.$mobile__default) {
-                right: unset;
-                left: 0;
-            }
-        }
-
-
-        .info {
-            padding-right: 2%;
-
-            .greeting {
-                color: var.$secondary-white-2;
-            }
-
-            .name {
-                color: var.$secondary-white-2;
-            }
-
-            .position {
-                color: var.$secondary-blue;
-                margin-bottom: 80px;
-            }
-
-            .code {
-                font-size: 16px;
-                line-height: 21px;
-                margin-bottom: 10px;
-            }
-
-            .expression {
-                display: flex;
-                align-items: center;
-                flex-wrap: wrap;
-            }
-
-            .variables {
-                color: var.$secondary-blue;
-            }
-
-            .value {
-                color: var.$accent-shamrock;
-            }
-
-            .assignment {
-                color: var.$secondary-white;
-            }
-
-            .github-link {
-                color: var.$accent-sweet-pink;
-            }
-        }
-
-        .game {
-            max-width: 500px;
-            width: 100%;
-            padding: 35px 35px 35px 30px;
-            position: relative;
-
-            background: linear-gradient(150.26deg, rgba(23, 85, 83, 0.7) 1.7%, rgba(67, 217, 173, 0.091) 81.82%);
-            border: 1px solid #0C1616;
-            box-shadow: inset 0px 2px 0px rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(64px);
-            /* Note: backdrop-filter has minimal browser support */
-
-            border-radius: 8px;
-
-            @media (max-width: var.$mobile__default) {
-                display: none;
-            }
-
-            .board-screw {
+            &:after {
                 position: absolute;
-                width: 13px;
-                height: 13px;
-                border-radius: 50%;
+                display: inline-block;
+                content: '';
+                width: 26px;
+                height: 26px;
+                background: var.$board-screw-icon no-repeat;
+            }
 
-                &:after {
-                    position: absolute;
-                    display: inline-block;
-                    content: '';
-                    width: 26px;
-                    height: 26px;
-                    background: var.$board-screw-icon no-repeat;
-                }
+            &.top {
+                top: 13px;
+            }
 
-                &.top {
-                    top: 13px;
-                }
+            &.bottom {
+                bottom: 13px;
+            }
 
-                &.bottom {
-                    bottom: 13px;
-                }
+            &.left {
+                left: 13px;
+            }
 
-                &.left {
-                    left: 13px;
-                }
-
-                &.right {
-                    right: 13px;
-                }
+            &.right {
+                right: 13px;
             }
         }
     }
+}
+
+//  Mobile
+@media (max-width: var.$mobile__default) {
+    .home {
+        &:before {
+            right: unset;
+            left: 0;
+        }
+
+        .game {
+            display: none;
+        }
+    }
+}
+
 </style>

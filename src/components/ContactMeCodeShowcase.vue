@@ -98,6 +98,7 @@ export default {
 <style lang="scss">
 @use "src/styles/variables" as var;
 
+//  Common
 .code-line {
     z-index: 1;
     position: relative;
@@ -111,8 +112,11 @@ export default {
         z-index: 3;
         top: 0;
     }
+}
 
-    @media (max-width: var.$tablet__small) {
+//  Mobile
+@media (max-width: var.$tablet__small) {
+    .code-line {
         display: inline-block;
 
         &:after {

@@ -1,5 +1,5 @@
 <template>
-    <div class="experience">
+    <div class="experience comment-content">
         <div class="mobile-title">
             <span>&#x2f;&#x2f; personal-info</span> &#x2f; experience
         </div>
@@ -103,74 +103,17 @@
 <style lang="scss">
 @use "src/styles/variables" as var;
 
-.experience {
-    .mobile-title {
-        display: none;
-
-        @media (max-width: var.$tablet__small) {
-            display: block;
-            margin-bottom: 17px;
-
-            span {
-                color: var.$secondary-white-2
-            }
-        }
-    }
-
-    .code-line {
-        @media (max-width: var.$tablet__small) {
-            display: block;
+//  Mobile
+@media (max-width: var.$tablet__small) {
+    .experience {
+        .code-line {
+            display: block !important;
 
             &.mobile-separator {
-                margin: 25px 0;
+                margin: 25px 0 !important;
             }
         }
     }
 }
 
-.code-line {
-    z-index: 1;
-    position: relative;
-    margin-bottom: 10px;
-
-    .mobile-title {
-        display: none;
-    }
-
-    &:after {
-        content: attr(data-line-nr);
-        position: absolute;
-        left: -40px;
-        color: #607B96;
-        z-index: 3;
-        top: 0;
-    }
-
-    @media (max-width: var.$tablet__small) {
-        display: inline-block;
-
-        .mobile-title {
-            display: block;
-            margin-bottom: 17px;
-
-            span {
-                color: var.$secondary-white-2
-            }
-        }
-
-        &:after {
-            content: none;
-        }
-
-        .comment {
-            display: none;
-        }
-    }
-
-    &.mobile-next-line {
-        @media (max-width: var.$tablet__small) {
-            display: block;
-        }
-    }
-}
 </style>

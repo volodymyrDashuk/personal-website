@@ -1,5 +1,5 @@
 <template>
-    <div class="projects">
+    <div class="projects content-wrapper">
         <Sidebar :accordion="getProjectsAccordion" @checkboxChecked="checkboxChecked"/>
         <div class="content">
             <div class="projects-list">
@@ -53,19 +53,8 @@ export default {
 <style lang="scss">
 @use "src/styles/variables" as var;
 
+//  Common
 .projects {
-    height: 100%;
-    display: flex;
-
-    .sidebar {
-        border-right: 1px solid var.$lines;
-
-        @media (min-width: var.$tablet__small) {
-            min-width: 260px;
-            width: 20%;
-        }
-    }
-
     .content {
         padding: 80px 17px 17px 80px;
 
@@ -91,15 +80,37 @@ export default {
     }
 
     @media (max-width: var.$tablet__small) {
-        flex-direction: column;
-
-        .sidebar {
-            max-width: none;
-        }
-
         .content {
             width: 100%;
             padding: 38px 17px;
+        }
+    }
+}
+
+//  Mobile
+@media (max-width: var.$desktop__small) {
+    .projects {
+        .projects-list {
+            grid-template-columns: repeat(2, minmax(0,1fr));
+        }
+    }
+}
+
+@media (max-width: var.$mobile__small) {
+    .projects {
+        .projects-list {
+            grid-template-columns: repeat(1, minmax(0,1fr));
+        }
+    }
+}
+
+//  Desktop
+@media (min-width: var.$tablet__small) {
+    .projects {
+        .content {
+            width: 80%;
+            overflow: scroll;
+            max-height: 860px;
         }
     }
 }

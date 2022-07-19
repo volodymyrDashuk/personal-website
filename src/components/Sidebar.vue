@@ -20,6 +20,7 @@ export default {
 <style lang="scss">
 @use "src/styles/variables" as var;
 
+//  Common
 .sidebar {
     .sidebar {
         padding-top: 10px;

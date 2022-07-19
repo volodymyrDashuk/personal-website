@@ -1,5 +1,5 @@
 <template>
-    <div class="blog-page">
+    <div class="blog-page content-wrapper">
         <Sidebar :accordion="getBlogAccordion" @checkboxChecked="checkboxChecked"/>
         <div class="content">
             <div class="blog-list">
@@ -52,50 +52,53 @@ export default {
 <style lang="scss">
 @use "src/styles/variables" as var;
 
+//  Common
 .blog-page {
-    height: 100%;
-    display: flex;
-
-    .sidebar {
-        max-width: 311px;
-        width: 100%;
-        border-right: 1px solid var.$lines;
-    }
-
     .content {
         width: 100%;
         padding: 80px 17px 17px 80px;
-
-        @media (min-width: var.$tablet__small) {
-            overflow: scroll;
-            max-height: 860px;
-        }
     }
 
     .blog-list {
         display: grid;
         grid-gap: 50px;
         grid-template-columns: repeat(3, minmax(0,1fr));
-
-        @media (max-width: var.$desktop__small) {
-            grid-template-columns: repeat(2, minmax(0,1fr));
-        }
-
-        @media (max-width: var.$mobile__small) {
-            grid-template-columns: repeat(1, minmax(0,1fr));
-        }
     }
+}
 
-    @media (max-width: var.$tablet__small) {
-        flex-direction: column;
-
-        .sidebar {
-            max-width: none;
-        }
-
+//  Mobile
+@media (max-width: var.$tablet__small) {
+    .blog-page {
         .content {
             width: 100%;
             padding: 38px 17px;
+        }
+    }
+}
+
+@media (max-width: var.$mobile__small) {
+    .blog-page {
+        .blog-list {
+            grid-template-columns: repeat(1, minmax(0,1fr));
+        }
+    }
+}
+
+//  Desktop
+@media (min-width: var.$tablet__small) {
+    .blog-page {
+        .content {
+            overflow: scroll;
+            max-height: 860px;
+        }
+    }
+}
+
+@media (max-width: var.$desktop__small) {
+    .blog-page {
+
+        .blog-list {
+            grid-template-columns: repeat(2, minmax(0,1fr));
         }
     }
 }

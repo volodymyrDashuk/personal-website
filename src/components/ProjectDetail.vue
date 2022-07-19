@@ -68,24 +68,16 @@ export default {
 
 <style lang="scss">
 @use "src/styles/variables" as var;
+
+    //  Common
     .project-detail {
         display: flex;
-
-        @media (max-width: var.$mobile__default) {
-            flex-direction: column-reverse;
-        }
 
         .project-images {
             max-width: 66%;
             width: 100%;
             overflow: scroll;
             max-height: calc(100vh - 110px);
-
-            @media (max-width: var.$mobile__default) {
-                max-width: unset;
-                overflow: unset;
-                max-height: unset;
-            }
 
             .img:not(:last-of-type) {
                 margin-bottom: 10px;
@@ -96,10 +88,6 @@ export default {
             max-width: 33%;
             width: 100%;
             padding: 30px 40px;
-
-            @media (max-width: var.$mobile__default) {
-                max-width: unset;
-            }
         }
 
         .title {
@@ -133,6 +121,23 @@ export default {
 
             span:not(:last-of-type) {
                 margin-right: 10px;
+            }
+        }
+    }
+
+    //  Mobile
+    @media (max-width: var.$mobile__default) {
+        .project-detail {
+            flex-direction: column-reverse;
+
+            .project-images {
+                max-width: unset;
+                overflow: unset;
+                max-height: unset;
+            }
+
+            .project-content {
+                max-width: unset;
             }
         }
     }

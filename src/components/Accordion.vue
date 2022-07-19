@@ -65,6 +65,7 @@ export default {
 <style lang="scss">
 @use "src/styles/variables" as var;
 
+//  Common
 .accordion {
     .accordion-item {
         &:not(:first-of-type) {

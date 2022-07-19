@@ -1,5 +1,5 @@
 <template>
-    <div class="contact">
+    <div class="contact content-wrapper">
         <Sidebar :accordion="getContacts"/>
         <div class="content">
             <ContactUsForm @name="changeName" @email="changeEmail" @message="changeMessage"/>
@@ -42,25 +42,10 @@ export default {
 <style lang="scss">
 @use "src/styles/variables" as var;
 
+//  Common
 .contact {
-    height: 100%;
-    display: flex;
-
-    .sidebar {
-        border-right: 1px solid var.$lines;
-
-        @media (min-width: var.$tablet__small) {
-            min-width: 260px;
-            width: 20%;
-        }
-    }
-
     .content {
         display: flex;
-
-        @media (min-width: var.$tablet__small) {
-            width: 80%;
-        }
     }
 
     .contact-form,
@@ -84,14 +69,11 @@ export default {
         width: 60%;
         overflow-y: scroll;
     }
+}
 
-    @media (max-width: var.$tablet__small) {
-        flex-direction: column;
-
-        .sidebar {
-            max-width: none;
-        }
-
+//  Mobile
+@media (max-width: var.$tablet__small) {
+    .contact {
         .content {
             flex-direction: column;
         }
@@ -105,6 +87,15 @@ export default {
 
         .code-showcase {
             display: none;
+        }
+    }
+}
+
+//  Desktop
+@media (min-width: var.$tablet__small) {
+    .contact {
+        .content {
+            width: 80%;
         }
     }
 }

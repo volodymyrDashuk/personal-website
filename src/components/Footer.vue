@@ -36,6 +36,7 @@ export default {
 <style lang="scss">
 @use "src/styles/variables" as var;
 
+//  Common
 .footer {
     display: flex;
     align-items: center;
@@ -44,10 +45,6 @@ export default {
     height: auto;
     margin-top: auto;
     z-index: 3;
-
-    @media (max-width: var.$mobile__small) {
-        justify-content: space-between;
-    }
 
     .footer-text {
         padding: 18px 18px 18px 22px;
@@ -62,10 +59,6 @@ export default {
         align-items: center;
         width: -webkit-fill-available;
         height: 100%;
-
-        @media (max-width: var.$mobile__small) {
-            width: unset;
-        }
     }
 
     .footer-link {
@@ -74,12 +67,6 @@ export default {
         padding: 13px 14px;
         height: 100%;
         text-decoration: none;
-
-        @media (max-width: var.$mobile__small) {
-            span {
-                display: none;
-            }
-        }
 
         &.facebook {
             &::after {
@@ -100,34 +87,15 @@ export default {
                 background: var.$github-default-icon no-repeat;
                 margin-left: 5px;
             }
-
-            @media (max-width: var.$mobile__small) {
-                padding-left: 14px;
-
-                &::after {
-                    margin-left: 0;
-                }
-            }
         }
 
         &:not(:last-of-type) {
             border-right: 1px solid var.$lines;
         }
 
-        &:first-of-type {
-            @media (max-width: var.$mobile__small) {
-                border-left: 1px solid var.$lines;
-            }
-        }
-
         &.last-link {
             border-left: 1px solid var.$lines;
             margin-left: auto;
-
-            @media (max-width: var.$mobile__small) {
-                border-left: none;
-                margin-left: unset;
-            }
         }
 
         &::after {
@@ -157,6 +125,32 @@ export default {
                 &::after {
                     background: var.$github-hover-icon no-repeat;
                 }
+            }
+        }
+    }
+}
+
+//  Mobile
+@media (max-width: var.$mobile__small) {
+    .footer {
+        justify-content: space-between;
+
+        .footer-links {
+            width: unset;
+        }
+
+        .footer-link {
+            span {
+                display: none;
+            }
+
+            &:first-of-type {
+                border-left: 1px solid var.$lines;
+            }
+
+            &.last-link {
+                border-left: none;
+                margin-left: unset;
             }
         }
     }

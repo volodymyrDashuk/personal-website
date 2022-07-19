@@ -148,6 +148,7 @@ export default {
 <style lang="scss">
 @use "src/styles/variables" as var;
 
+//  Common
 .contact-form {
     .form-group:not(:last-of-type) {
         margin-bottom: 24px;

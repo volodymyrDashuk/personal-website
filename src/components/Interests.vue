@@ -1,5 +1,5 @@
 <template>
-    <div class="interests">
+    <div class="interests comment-content">
         <div class="mobile-title">
             <span>&#x2f;&#x2f; personal-info</span> &#x2f; interests
         </div>
@@ -53,62 +53,3 @@
         </div>
     </div>
 </template>
-
-<style lang="scss">
-@use "src/styles/variables" as var;
-
-.interests {
-    .mobile-title {
-        display: none;
-
-        @media (max-width: var.$tablet__small) {
-            display: block;
-            margin-bottom: 17px;
-
-            span {
-                color: var.$secondary-white-2
-            }
-        }
-    }
-}
-
-.code-line {
-    z-index: 1;
-    position: relative;
-    margin-bottom: 10px;
-
-    .mobile-title {
-        display: none;
-    }
-
-    &:after {
-        content: attr(data-line-nr);
-        position: absolute;
-        left: -40px;
-        color: #607B96;
-        z-index: 3;
-        top: 0;
-    }
-
-    @media (max-width: var.$tablet__small) {
-        display: inline-block;
-
-        .mobile-title {
-            display: block;
-            margin-bottom: 17px;
-
-            span {
-                color: var.$secondary-white-2
-            }
-        }
-
-        &:after {
-            content: none;
-        }
-
-        .comment {
-            display: none;
-        }
-    }
-}
-</style>
