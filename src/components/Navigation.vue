@@ -20,6 +20,7 @@
                 :to="link.url"
                 :exact="link.exact"
                 :title="link.title"
+                @click="isActive = !isActive"
             >
                 {{ link.title }}
             </router-link>

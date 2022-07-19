@@ -20,5 +20,9 @@ export default {
 
     .main-content {
         height: calc(100vh - 55px - 56px);
+
+        @media (max-width: var.$tablet__small) {
+            height: auto;
+        }
     }
 </style>

@@ -48,6 +48,7 @@ $content-width: 1160px;
         @media (max-width: $content-width) {
             padding-left: 20px;
             padding-right: 20px;
+            padding-top: 20px;
         }
 
         &:before {
