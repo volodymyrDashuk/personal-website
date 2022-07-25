@@ -28,11 +28,11 @@ const routes = [
                 name: 'Interests',
                 component: () => import(/* webpackChunkName: "Interests" */ '../components/Interests.vue')
             },
-            {
-                path: '/about/education',
-                name: 'Education',
-                component: () => import(/* webpackChunkName: "Education" */ '../components/Education.vue')
-            }
+            // {
+            //     path: '/about/education',
+            //     name: 'Education',
+            //     component: () => import(/* webpackChunkName: "Education" */ '../components/Education.vue')
+            // }
         ]
     },
     {

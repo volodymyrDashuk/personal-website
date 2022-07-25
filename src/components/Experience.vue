@@ -107,8 +107,6 @@
 @media (max-width: var.$tablet__small) {
     .experience {
         .code-line {
-            display: block !important;
-
             &.mobile-separator {
                 margin: 25px 0 !important;
             }

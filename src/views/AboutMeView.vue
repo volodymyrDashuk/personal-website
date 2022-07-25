@@ -85,7 +85,7 @@ export default {
         }
 
         .code-line {
-            display: inline-block;
+            display: block;
 
             .mobile-title {
                 display: block;

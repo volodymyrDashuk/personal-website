@@ -9,7 +9,7 @@ export default {
                     { name: "bio", href: '/about/bio', colorFolder: 'green-folder' },
                     { name: "experience", href: '/about/experience', colorFolder: 'rose-folder' },
                     { name: "interests", href: '/about/interests', colorFolder: 'blue-folder' },
-                    { name: "education", href: '/about/education', colorFolder: 'yellow-folder'  }
+                    // { name: "education", href: '/about/education', colorFolder: 'yellow-folder'  }
                 ]
             },
             "contacts": {
