@@ -18,7 +18,8 @@ export default {
                 "checkbox": false,
                 "items": [
                     { name: "donvov1990@gmail.com", href: 'mailto:donvov1990@gmail.com', target: '_blank'},
-                    { name: "@volodymyrDashuk", href: 'https://t.me/volodymyrDashuk', target: '_blank' }
+                    { name: "@volodymyrDashuk", href: 'https://t.me/volodymyrDashuk', target: '_blank' },
+                    { name: "Download CV", href: '/assets/CV/CV.pdf', target: '_blank' }
                 ]
             }
         }

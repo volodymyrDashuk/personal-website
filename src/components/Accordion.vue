@@ -131,10 +131,18 @@ export default {
                 }
             }
 
-            .accordion-list-item:last-of-type {
+            .accordion-list-item:nth-child(2) {
                 .accordion-list-link {
                     &:before {
                         background: var.$telegram-icon no-repeat;
+                    }
+                }
+            }
+
+            .accordion-list-item:nth-child(3) {
+                .accordion-list-link {
+                    &:before {
+                        background: var.$cv-icon no-repeat;
                     }
                 }
             }

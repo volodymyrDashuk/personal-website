@@ -32,15 +32,9 @@ class About extends Me {
             ]
     }
 
-    petProjects() {
-        return [
-            { 'Tim (Time logging project)' : 'https://tim-assistant.netlify.app/' }
-        ]
-    }
-
     crazyAbout() {
         return [
-            'coding', 'AC/DC', 'bicycle riding', 'video games'
+            'kayaking', 'bicycle riding', 'coding', 'AC/DC', 'video games'
         ]
     }
 }
