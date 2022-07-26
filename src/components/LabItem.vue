@@ -3,7 +3,7 @@
         class="list-item"
     >
         <div class="list-item-title">
-            <span class="name">Project {{ cards.id }} </span>
+            <span class="name">Lab {{ cards.id }} </span>
             &#x2f;&#x2f; _{{ cards.name }}
         </div>
         <div class="card">
@@ -25,11 +25,22 @@
                 <p>{{ cards.card_text }}</p>
             </div>
             <div class="card-link">
-                <router-link class="button-secondary"
-                             :to="{ name: 'ProjectDetail', params: {id: cards.id} }"
+                <router-link
+                    v-if="cards.isDetail"
+                    class="button-secondary"
+                    :to="{ name: 'LabDetail', params: {id: cards.id} }"
                 >
                     view-project
                 </router-link>
+
+                <a
+                    v-else
+                    class="button-secondary"
+                    :href="cards.detail.link"
+                    :target="cards.target"
+                >
+                    view-project
+                </a>
             </div>
         </div>
     </div>
@@ -38,12 +49,6 @@
 <script>
 export default {
     props: ['cards'],
-    data() {
-        return {
-
-
-        };
-    },
 }
 </script>
 
@@ -80,7 +85,7 @@ $magento-color: #EC6737;
         border: 1px solid var.$lines;
         border-radius: 15px;
 
-        // 31px = project-title font-size (16px) + project-title margin-bottom (15px)
+        // 31px = lab-title font-size (16px) + lab-title margin-bottom (15px)
         height: calc(100% - 31px);
 
         .card-header {

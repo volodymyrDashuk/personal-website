@@ -48,10 +48,27 @@ const routes = [
         component: () => import(/* webpackChunkName: "ProjectDetail" */ '../components/ProjectDetail.vue')
     },
     {
+        path: '/lab',
+        name: 'LabView',
+        meta: {layout: 'main'},
+        component: () => import(/* webpackChunkName: "projects" */ '../views/LabView.vue')
+    },
+    {
+        path: '/lab/:id',
+        name: 'LabDetail',
+        meta: {layout: 'main'},
+        component: () => import(/* webpackChunkName: "LabDetail" */ '../components/LabDetail.vue')
+    },
+    {
         path: '/contact',
         name: 'ContactView',
         meta: {layout: 'main'},
         component: () => import(/* webpackChunkName: "contact" */ '../views/ContactView.vue')
+    },
+    {
+        path: '/:pathMatch(.*)*',
+        name: 'noRoute',
+        component: () => import('../views/NoRouteView.vue')
     }
 ]
 

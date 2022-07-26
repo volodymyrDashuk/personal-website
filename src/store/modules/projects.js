@@ -26,6 +26,7 @@ export default {
                 card_text: 'Pollardi Fashion Group is a brand of wedding and evening dresses',
                 tech: ['HTML', 'CSS', 'JavaScript', 'React'],
                 routeComponentName: 'pollardi',
+                isDetail: true,
                 detail: {
                     image: ['pollardi/homepage.png', 'pollardi/checkout.png', 'pollardi/pdp.png', 'pollardi/blog.png', 'pollardi/store_location.png'],
                     image_alt: 'project images',
@@ -46,6 +47,7 @@ export default {
                 card_text: 'Top City Service is an online store for the engineering team.',
                 tech: ['HTML', 'CSS', 'JavaScript'],
                 routeComponentName: 'topsity',
+                isDetail: true,
                 detail: {
                     image: ['topsity/img1.jpeg', 'topsity/img2.jpeg', 'topsity/img3.jpeg', 'topsity/img4.gif', 'topsity/img5.jpeg'],
                     image_alt: 'topsity',
@@ -66,6 +68,7 @@ export default {
                 card_text: 'Services for the removal, processing and disposal of household waste provided in the settlement in accordance with the rules for the improvement of the territory of Khmelnitsky.',
                 tech: ['HTML', 'CSS', 'JavaScript'],
                 routeComponentName: 'speckomuntrans',
+                isDetail: true,
                 detail: {
                     image: ['sct/sct.png'],
                     image_alt: 'SpecKomunTrans',
@@ -86,6 +89,7 @@ export default {
                 card_text: 'International company of the administrative-legal and tax consulting for midsize and small business.',
                 tech: ['HTML', 'CSS', 'JavaScript'],
                 routeComponentName: 'speckomuntrans',
+                isDetail: true,
                 detail: {
                     image: ['eusg/hp.png', 'eusg/hp.gif', 'eusg/blog.png' ,'eusg/contact.gif'],
                     image_alt: 'EuCG',
