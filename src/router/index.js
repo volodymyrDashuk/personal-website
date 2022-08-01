@@ -66,7 +66,7 @@ const routes = [
         component: () => import(/* webpackChunkName: "contact" */ '../views/ContactView.vue')
     },
     {
-        path: '/:pathMatch(.*)*',
+        path: '/*',
         name: 'noRoute',
         component: () => import('../views/NoRouteView.vue')
     }
