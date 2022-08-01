@@ -84,6 +84,7 @@ $magento-color: #EC6737;
 
         // 31px = project-title font-size (16px) + project-title margin-bottom (15px)
         height: calc(100% - 31px);
+        overflow: hidden;
 
         .card-header {
             position: relative;

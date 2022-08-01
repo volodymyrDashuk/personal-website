@@ -97,6 +97,7 @@ $magento-color: #EC6737;
 
         // 31px = lab-title font-size (16px) + lab-title margin-bottom (15px)
         height: calc(100% - 31px);
+        overflow: hidden;
 
         .card-header {
             position: relative;
