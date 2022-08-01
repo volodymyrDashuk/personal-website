@@ -102,12 +102,6 @@ export default {
             }
         ],
     },
-    actions: {
-
-    },
-    mutations: {
-
-    },
     getters: {
         getProjectsAccordion(state) {
             return state.projectsAccordion
