@@ -10,7 +10,7 @@
                 <span class="variables">const&nbsp;</span>
                 <span class="value">githubLink&nbsp;</span>
                 <span class="assignment">=&nbsp;</span>
-                <a class="github-link" href="https://github.com/volodymyrDashuk">&#x201C;https://github.com/volodymyrDashuk&#x201D;</a>
+                <a class="github-link" target="_blank" href="https://github.com/volodymyrDashuk">&#x201C;https://github.com/volodymyrDashuk&#x201D;</a>
             </p>
         </div>
         <div class="game">

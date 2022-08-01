@@ -68,7 +68,6 @@ export default {
             this.deckOfCards = this.shuffle(this.cards);
         }
     },
-
     watch: {
         flippedCards(cards) {
             if (cards.length === 2) {
@@ -86,7 +85,6 @@ export default {
             }
         }
     },
-
     mounted() {
         this.cards = this.cards.map((x, index) => {
             return { id: index, content: x, isPairFound: false };

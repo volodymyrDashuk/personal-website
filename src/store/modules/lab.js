@@ -2,7 +2,7 @@ export default {
     state: {
         labsAccordion: {
             "labs": {
-                "name": "my_projects",
+                "name": "my_pet_projects",
                 "open": true,
                 "checkbox": true,
                 "items": [
@@ -20,21 +20,32 @@ export default {
                 id: 1,
                 name: 'Tim',
                 slug: 'tim',
-                image_path: 'pollardi.jpeg',
+                image_path: 'tim.png',
                 image_alt: 'Tim',
                 icon: ['icon-vue'],
-                card_text: 'Time management application',
+                card_text: 'Tim is a service for time logging and management, which displays small statistics (how much time and tasks were done in certain periods of time)',
                 tech: ['Vue.js'],
                 routeComponentName: 'tim',
-                isDetail: true,
+                isDetail: false,
                 target: '_blank',
                 detail: {
-                    image: ['pollardi/homepage.png', 'pollardi/checkout.png', 'pollardi/pdp.png', 'pollardi/blog.png', 'pollardi/store_location.png'],
-                    image_alt: 'Tim images',
-                    tags: ['Vue.js', 'Vuex', 'CSS'],
-                    title: 'Tim',
-                    text: 'Tim is a time management application.',
                     link: 'https://tim-assistant.netlify.app/'
+                }
+            },
+            {
+                id: 2,
+                name: 'Memory Card Game',
+                slug: 'MemoryCardGame',
+                image_path: 'memoryCardGame.png',
+                image_alt: 'Memory Card Game',
+                icon: ['icon-vue'],
+                card_text: 'The object of the game is to collect the most matching pairs.',
+                tech: ['Vue.js'],
+                routeComponentName: 'MemoryCardGame',
+                isDetail: false,
+                target: '_blank',
+                detail: {
+                    link: 'https://codesandbox.io/s/card-game-vue3-0pmbxr?file=/src/components/MemoryCardGame.vue'
                 }
             }
         ],

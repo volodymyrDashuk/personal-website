@@ -11,6 +11,8 @@
                 <img
                     :src="`assets/images/project-list-images/${cards.image_path}`"
                     :alt="cards.image_alt"
+                    height="150"
+                    width="370"
                 >
                 <div class="icons"
                 >
@@ -168,6 +170,12 @@ $magento-color: #EC6737;
                 &::after {
                     background: var.$magento-icon no-repeat;
                 }
+            }
+
+            img {
+                width: 100%;
+                height: 13rem;
+                object-fit: cover;
             }
         }
 

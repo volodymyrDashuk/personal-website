@@ -5,7 +5,7 @@
                  v-for="imagePath in labDetail.detail.image"
             >
                 <img
-                    :src="`${publicPath}` + 'assets/images/project-details-images/' + imagePath"
+                    :src="`${publicPath}` + 'assets/images/lab-details-images/' + imagePath"
                     :alt="labDetail.detail.image_alt"
                 />
             </div>

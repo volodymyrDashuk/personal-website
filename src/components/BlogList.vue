@@ -11,6 +11,7 @@
                 <img
                     :src="item.image_path"
                     :alt="item.image_alt"
+                    height="368"
                 >
                 <div class="icons"
                 >

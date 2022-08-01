@@ -3,14 +3,17 @@
         class="list-item"
     >
         <div class="list-item-title">
-            <span class="name">Lab {{ cards.id }} </span>
+            <span class="name">Project {{ cards.id }} </span>
             &#x2f;&#x2f; _{{ cards.name }}
         </div>
         <div class="card">
-            <div class="card-header">
+            <div class="card-header"
+                 :style="ratio">
                 <img
-                    :src="`assets/images/project-list-images/${cards.image_path}`"
+                    :src="`assets/images/lab-list-images/${cards.image_path}`"
                     :alt="cards.image_alt"
+                    height="150"
+                    width="370"
                 >
                 <div class="icons"
                 >
@@ -49,6 +52,13 @@
 <script>
 export default {
     props: ['cards'],
+    methods: {
+        ratio() {
+            if(!this.height && !this.width) return 0;
+
+            return "flex:" + ((Math.round(this.$refs.app.clientHeight) / Math.round(this.$refs.app.clientWidth)) * 100).toFixed(2);
+        }
+    }
 }
 </script>
 
@@ -173,6 +183,12 @@ $magento-color: #EC6737;
                 &::after {
                     background: var.$magento-icon no-repeat;
                 }
+            }
+
+            img {
+                width: 100%;
+                height: 13rem;
+                object-fit: cover;
             }
         }
 

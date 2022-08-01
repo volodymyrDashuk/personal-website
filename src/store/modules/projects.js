@@ -18,7 +18,7 @@ export default {
         projectsList: [
             {
                 id: 1,
-                name: 'pollardi',
+                name: 'Pollardi',
                 slug: 'pollardi',
                 image_path: 'pollardi.jpeg',
                 image_alt: 'Pollardi Fashion Group',
@@ -39,7 +39,7 @@ export default {
             },
             {
                 id: 2,
-                name: 'topsity',
+                name: 'Topsity',
                 slug: 'topsity',
                 image_path: 'topsity.png',
                 image_alt: 'topsity',
