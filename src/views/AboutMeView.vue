@@ -37,7 +37,7 @@ export default {
 
     .code-showcase {
         padding: 17px 40px;
-        overflow-y: scroll;
+        overflow-y: auto;
 
         @media (min-width: var.$tablet__small) {
             width: 46%;

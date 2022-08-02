@@ -67,7 +67,7 @@ export default {
     .code-showcase {
         padding: 100px 7% 17px;
         width: 60%;
-        overflow-y: scroll;
+        overflow-y: auto;
     }
 }
 

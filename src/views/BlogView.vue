@@ -88,7 +88,7 @@ export default {
 @media (min-width: var.$tablet__small) {
     .blog-page {
         .content {
-            overflow: scroll;
+            overflow-y: auto;
             max-height: 860px;
         }
     }

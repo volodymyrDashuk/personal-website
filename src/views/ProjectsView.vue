@@ -60,7 +60,7 @@ export default {
 
         @media (min-width: var.$tablet__small) {
             width: 80%;
-            overflow: scroll;
+            overflow-y: auto;
             max-height: 860px;
         }
     }
@@ -109,7 +109,7 @@ export default {
     .projects {
         .content {
             width: 80%;
-            overflow: scroll;
+            overflow-y: auto;
             max-height: 860px;
         }
     }
