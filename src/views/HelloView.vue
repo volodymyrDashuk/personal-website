@@ -1,11 +1,11 @@
 <template>
     <div class="home">
         <div class="info">
-            <p class="greeting">Hi all. I am</p>
+            <p class="greeting">Hey &#128075;. I am</p>
             <h1 class="name">Volodymyr Dashuk</h1>
             <h2 class="position">&#x3e; Front-end developer</h2>
-            <p class="code">&#x2f;&#x2f; complete the game to continue</p>
-            <p class="code">&#x2f;&#x2f; you can also see it on my Github page</p>
+            <p class="code">&#x2f;&#x2f; complete the game or just continue</p>
+            <p class="code">&#x2f;&#x2f; you can also see my projects on my Github page</p>
             <p class="expression">
                 <span class="variables">const&nbsp;</span>
                 <span class="value">githubLink&nbsp;</span>
