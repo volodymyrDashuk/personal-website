@@ -17,7 +17,7 @@
             <span class="comment">*</span> I am a Front-end developer with
         </div>
         <div data-line-nr="05" class="code-line">
-            <span class="comment">*</span> 4 years of commercial experience.
+            <span class="comment">*</span> {{ experienceNumb }} years of commercial experience.
         </div>
         <div data-line-nr="06" class="code-line">
             <span class="comment">*</span>
@@ -81,3 +81,36 @@
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            startDate: new Date(2018, 11), // December 2018
+        };
+    },
+    computed: {
+        experienceYears() {
+            const now = new Date();
+            const yearsDiff = now.getFullYear() - this.startDate.getFullYear();
+            const monthsDiff = now.getMonth() - this.startDate.getMonth();
+
+            return yearsDiff - (monthsDiff < 0 ? 1 : 0);
+        },
+        experienceNumb() {
+            const now = new Date();
+            const monthsDiff = (now.getFullYear() - this.startDate.getFullYear()) * 12 + now.getMonth() - this.startDate.getMonth();
+            const years = Math.floor(monthsDiff / 12);
+            const remainingMonths = monthsDiff % 12;
+
+            if (remainingMonths >= 9) {
+                return `almost ${years + 1}`;
+            } else if (remainingMonths >= 1) {
+                return `more than ${years}`;
+            } else {
+                return `${years}`;
+            }
+        }
+    }
+};
+</script>
