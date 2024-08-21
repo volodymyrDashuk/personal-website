@@ -97,7 +97,7 @@ export default {
                     title: 'European consulting group',
                     subtitle: '',
                     text: 'Services for the handling of special equipment and transportation of waste by dump trucks for subsequent disposal in a landfill.',
-                    link: 'https://skt.km.ua/'
+                    link: 'https://www.eucg-consulting.com/uk-uk'
                 }
             }
         ],

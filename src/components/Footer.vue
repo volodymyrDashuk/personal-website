@@ -152,6 +152,12 @@ export default {
                 border-left: none;
                 margin-left: unset;
             }
+
+            &.github {
+                &::after {
+                    margin-left: unset;
+                }
+            }
         }
     }
 }
