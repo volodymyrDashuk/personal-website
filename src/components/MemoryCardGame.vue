@@ -45,13 +45,15 @@ export default {
         },
 
         onClick(card, index) {
-            if (!card.isPairFound) {
-                clearTimeout(this.timer);
-                this.flippedCards =
-                    this.flippedCards.length === 2
-                        ? [{ ...card, index }]
-                        : [...this.flippedCards, { ...card, index }];
+            if (card.isPairFound || this.flippedCards.find(c => c.id === card.id)) {
+                return;
             }
+
+            clearTimeout(this.timer);
+            this.flippedCards =
+                this.flippedCards.length === 2
+                    ? [{ ...card, index }]
+                    : [...this.flippedCards, { ...card, index }];
         },
 
         shuffle(cards) {
