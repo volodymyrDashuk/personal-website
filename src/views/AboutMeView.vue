@@ -12,12 +12,11 @@
 
 <script>
 import Sidebar from "@/components/Sidebar";
-import Bio from "@/components/Bio";
 import CodeShowcase from "@/components/CodeShowcase";
 import {mapGetters} from "vuex";
 
 export default {
-    components: {CodeShowcase, Sidebar, Bio},
+    components: {CodeShowcase, Sidebar},
     computed: {
         ...mapGetters(['getAboutMe'])
     }

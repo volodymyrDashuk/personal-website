@@ -16,23 +16,18 @@ const routes = [
             {
                 path: '/about/bio',
                 name: 'Bio',
-                component: () => import(/* webpackChunkName: "Bio" */ '../components/Bio.vue')
+                component: () => import(/* webpackChunkName: "Interests" */ '../components/InfoSection.vue')
             },
             {
                 path: '/about/experience',
                 name: 'Experience',
-                component: () => import(/* webpackChunkName: "Experience" */ '../components/Experience.vue')
+                component: () => import(/* webpackChunkName: "Interests" */ '../components/InfoSection.vue')
             },
             {
                 path: '/about/interests',
                 name: 'Interests',
-                component: () => import(/* webpackChunkName: "Interests" */ '../components/Interests.vue')
-            },
-            // {
-            //     path: '/about/education',
-            //     name: 'Education',
-            //     component: () => import(/* webpackChunkName: "Education" */ '../components/Education.vue')
-            // }
+                component: () => import(/* webpackChunkName: "Interests" */ '../components/InfoSection.vue')
+            }
         ]
     },
     {

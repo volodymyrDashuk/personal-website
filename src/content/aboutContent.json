@@ -1,0 +1,81 @@
+{
+    "bio": {
+        "title": "bio",
+        "content": [
+            "About me",
+            "",
+            "I am a Front-end developer with",
+            "12 years of commercial experience.",
+            "",
+            "I enjoy solving issues,",
+            "creating smart user interfaces,",
+            "developing extensive web experience",
+            "and web applications.",
+            "I use HTML, CSS, and JavaScript",
+            "to create adaptive websites",
+            "and web applications",
+            "that give users the best",
+            "and most appropriate experience",
+            "suitable for their devices and browsers.",
+            "",
+            "I write standards-based code that is semantic,",
+            "accessible and easy to maintain,",
+            "cross-browser and productive.",
+            "",
+            "I build successful adaptive websites",
+            "that are fast, easy to use,",
+            "and built using best practices."
+        ]
+    },
+    "experience": {
+        "title": "experience",
+        "content": [
+            "Experience",
+            "",
+            "Magento Front-end developer,",
+            "Magecom 08.2021 - Present",
+            "",
+            "Magento Front-end developer,",
+            "Atwix — 08.2020 - 08.2021",
+            "",
+            "Front-end developer,",
+            "Devloop.pro — 06.2019 - 08.2020",
+            "",
+            "Front-end developer,",
+            "freelancer — 12.2018 - 06.2019",
+            "",
+            "Scope of work.",
+            "- Daily maintenance of code, debugging,",
+            "production support,",
+            "solving clients problems;",
+            "- Theme development,",
+            "integrated Marketplace extension",
+            "and customization;",
+            "- Optimizing and testing website on",
+            "all supported desktop",
+            "and mobile browsers / platforms,",
+            "- Develop and test emails",
+            "for compatibility with multiple",
+            "email clients and web browsers;",
+            "- Collaboration with customer teams",
+            "to develop new features."
+        ]
+    },
+    "interests": {
+        "title": "interests",
+        "content": [
+            "Interests",
+            "",
+            "I have different interests and",
+            "one of them is kayaking &#128675;,",
+            " which came to me quite recently.",
+            "I got to know a group of people",
+            "who do weekend kayaking",
+            "trips together in picturesque places.",
+            "I also love to ride my",
+            "bike, play video games,",
+            "listen the rock",
+            "and enjoy life!"
+        ]
+    }
+}
