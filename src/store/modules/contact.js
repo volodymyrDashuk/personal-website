@@ -1,26 +1,12 @@
+import contactsData from '@/content/contact/contactFilters.json';
+
 export default {
     state: {
-        contacts: {
-            "contacts": {
-                "name": "contacts",
-                "open": true,
-                "checkbox": false,
-                "items": [
-                    { name: "donvov1990@gmail.com", href: 'mailto:donvov1990@gmail.com', target: '_blank'},
-                    { name: "@volodymyrDashuk", href: 'https://t.me/volodymyrDashuk', target: '_blank' }
-                ]
-            }
-        },
-    },
-    actions: {
-
-    },
-    mutations: {
-
+        contacts: contactsData,
     },
     getters: {
         getContacts(state) {
-            return state.contacts
+            return state.contacts;
         }
     }
-}
+};

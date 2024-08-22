@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import aboutContent from '@/content/aboutContent.json';
+import aboutContent from '@/content/about/aboutContent.json';
 
 export default {
     data() {
