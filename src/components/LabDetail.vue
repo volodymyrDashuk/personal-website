@@ -76,7 +76,7 @@ export default {
         .project-images {
             max-width: 66%;
             width: 100%;
-            overflow: scroll;
+            overflow-y: scroll;
             max-height: calc(100vh - 110px);
 
             .img:not(:last-of-type) {
